@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="player">
         <img src="images/1428089889.svg" alt="Headphone image">
-        <audio id="player" controls>
-            <source id="source" src="songs/OMIDO x Silent Child - Me & My Demons (Lyric Video).mp3" />
+        <audio id="player">
+            <source id="source" />
             Audio not supported.
         </audio>
+
+        <progress id="progress" value="0" max="100"></progress>
 
         <div id="controls">
             <p id="currentSong"></p>
             <div class="controlWrapper">
-                <span>&#9658;</span>
-                <span>&#10074;&#10074;</span>
+                <span onclick="playAudio()">&#9658;</span>
+                <span onclick="pauseAudio()">&#10074;&#10074;</span>
             </div>
             <p>Volume</p>
             <div class="volume">
@@ -31,12 +38,13 @@
 
         <h2>My songs:</h2>
         <div id="songList">
-            <ol>
-                <li>OMIDO x Silent Child - Me & My Demons (Lyric Video).mp3</li>
-                <li>Y2Mate.is - INDILA - Ainsi Bas La Vida (REMIX by CHIRONIC) slowed to perfection-McfK9yUYEX8-160k-1647002021748.mp3</li>
-            </ol>
+
         </div>
 
     </div>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
